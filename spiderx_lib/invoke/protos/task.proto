@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package task;
+
+
+service TaskService {
+    rpc SendTaskByClient (SendTaskRequest) returns (ReplyTaskResponse) {
+    };
+}
+
+
+
+
+enum StatType{
+    SUCCESS = 0;
+    FAILURE = 1;
+}
+
+
+
+message SendTaskRequest {
+    string policy = 1; // all, list, data
+    string url = 2;
+    string site_name = 3;
+    int32 depth = 4;
+    string father = 5;
+    string task_type = 6; // list, data
+    bool dont_filter = 7; // 不去重
+
+    string task_id = 8;
+    StatType stat = 9;
+    string message = 10;
+
+}
+
+message ReplyTaskResponse {
+    int32 err_code = 1;
+    string message = 2;
+}
