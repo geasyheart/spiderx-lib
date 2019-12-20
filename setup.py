@@ -11,7 +11,7 @@ setup(
         'spiderx_lib/invoke',
         'spiderx_lib/invoke/gen',
     ],
-    url='none',
+    url='https://github.com/geasyheart/spiderx-lib',
     license='GPL3',
     author='yu.zhang',
     author_email='geasyheart@163.com',
