@@ -5,7 +5,7 @@ from distutils.core import setup
 
 setup(
     name='spiderx-lib',
-    version='0.0.2',
+    version='0.0.3',
     packages=[
         'spiderx_lib',
         'spiderx_lib/invoke',
