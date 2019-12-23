@@ -5,11 +5,10 @@ from distutils.core import setup
 
 setup(
     name='spiderx-lib',
-    version='0.0.1',
+    version='0.0.2',
     packages=[
         'spiderx_lib',
         'spiderx_lib/invoke',
-        'spiderx_lib/invoke/gen',
     ],
     url='https://github.com/geasyheart/spiderx-lib',
     license='GPL3',
