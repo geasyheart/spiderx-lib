@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='task',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\ntask.proto\x12\x04task\"\xc8\x01\n\x0fSendTaskRequest\x12\x0e\n\x06policy\x18\x01 \x01(\t\x12\x0b\n\x03url\x18\x02 \x01(\t\x12\x11\n\tsite_name\x18\x03 \x01(\t\x12\r\n\x05\x64\x65pth\x18\x04 \x01(\x05\x12\x0e\n\x06\x66\x61ther\x18\x05 \x01(\t\x12\x11\n\ttask_type\x18\x06 \x01(\t\x12\x13\n\x0b\x64ont_filter\x18\x07 \x01(\x08\x12\x0f\n\x07task_id\x18\x08 \x01(\t\x12\x1c\n\x04stat\x18\t \x01(\x0e\x32\x0e.task.StatType\x12\x0f\n\x07message\x18\n \x01(\t\"6\n\x11ReplyTaskResponse\x12\x10\n\x08\x65rr_code\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t*$\n\x08StatType\x12\x0b\n\x07SUCCESS\x10\x00\x12\x0b\n\x07\x46\x41ILURE\x10\x01\x32S\n\x0bTaskService\x12\x44\n\x10SendTaskByClient\x12\x15.task.SendTaskRequest\x1a\x17.task.ReplyTaskResponse\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\ntask.proto\x12\x04task\"\xc8\x01\n\x0fSendTaskRequest\x12\x0e\n\x06policy\x18\x01 \x01(\t\x12\x0b\n\x03url\x18\x02 \x01(\t\x12\x11\n\tsite_name\x18\x03 \x01(\t\x12\r\n\x05\x64\x65pth\x18\x04 \x01(\x05\x12\x0e\n\x06\x66\x61ther\x18\x05 \x01(\t\x12\x11\n\ttask_type\x18\x06 \x01(\t\x12\x13\n\x0b\x64ont_filter\x18\x07 \x01(\x08\x12\x0f\n\x07task_id\x18\x08 \x01(\t\x12\x1c\n\x04stat\x18\t \x01(\x0e\x32\x0e.task.StatType\x12\x0f\n\x07message\x18\n \x01(\t\"6\n\x11ReplyTaskResponse\x12\x10\n\x08\x65rr_code\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t*1\n\x08StatType\x12\x0b\n\x07\x44\x45\x46\x41ULT\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x0b\n\x07\x46\x41ILURE\x10\x02\x32S\n\x0bTaskService\x12\x44\n\x10SendTaskByClient\x12\x15.task.SendTaskRequest\x1a\x17.task.ReplyTaskResponse\"\x00\x62\x06proto3')
 )
 
 _STATTYPE = _descriptor.EnumDescriptor(
@@ -31,24 +31,29 @@ _STATTYPE = _descriptor.EnumDescriptor(
   file=DESCRIPTOR,
   values=[
     _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=0, number=0,
+      name='DEFAULT', index=0, number=0,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='FAILURE', index=1, number=1,
+      name='SUCCESS', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FAILURE', index=2, number=2,
       serialized_options=None,
       type=None),
   ],
   containing_type=None,
   serialized_options=None,
   serialized_start=279,
-  serialized_end=315,
+  serialized_end=328,
 )
 _sym_db.RegisterEnumDescriptor(_STATTYPE)
 
 StatType = enum_type_wrapper.EnumTypeWrapper(_STATTYPE)
-SUCCESS = 0
-FAILURE = 1
+DEFAULT = 0
+SUCCESS = 1
+FAILURE = 2
 
 
 
@@ -211,8 +216,8 @@ _TASKSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=317,
-  serialized_end=400,
+  serialized_start=330,
+  serialized_end=413,
   methods=[
   _descriptor.MethodDescriptor(
     name='SendTaskByClient',

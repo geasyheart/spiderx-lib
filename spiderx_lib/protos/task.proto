@@ -12,8 +12,9 @@ service TaskService {
 
 
 enum StatType{
-    SUCCESS = 0;
-    FAILURE = 1;
+    DEFAULT = 0;
+    SUCCESS = 1;
+    FAILURE = 2;
 }
 
 
