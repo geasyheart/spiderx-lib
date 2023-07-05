@@ -16,7 +16,7 @@ setup(
     author_email='geasyheart@163.com',
     description='libs',
     install_requires=[
-        'grpcio==1.26.0',
+        'grpcio==1.53.0',
         'grpcio-tools==1.26.0',
         'kombu==4.2.1'
     ]
